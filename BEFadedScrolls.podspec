@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
     s.name = 'BEFadedScrolls'
     s.version = '1.0.0'
-    s.license = { :type => "MIT", :file => "LICENSE.txt" }
+    s.license = { :type => "MIT", :file => "LICENSE" }
     s.summary = 'Simple Faded Scrolls'
     s.homepage = 'https://github.com/DevBorisElkin/BEFadedScrolls'
     s.authors = { 'Boris Elkin' => 'https://github.com/DevBorisElkin' }
