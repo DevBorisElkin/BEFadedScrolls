@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
     s.name = 'BEFadedScrolls'
-    s.version = '1.0.3'
+    s.version = '1.0.4'
     s.license = { :type => "MIT", :file => "LICENSE" }
     #s.license = 'MIT'
     s.summary = 'Simple Faded Scrolls'
