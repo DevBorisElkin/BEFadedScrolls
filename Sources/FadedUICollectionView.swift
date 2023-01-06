@@ -76,11 +76,11 @@ open class FadedUICollectionView: UICollectionView {
         }
     }
     
-    func configure(startFadeSize: CGFloat, endFadeSize: CGFloat, interpolation: CalculationHelpers.FadeInterpolation) {
+    public func configure(startFadeSize: CGFloat, endFadeSize: CGFloat, interpolation: CalculationHelpers.FadeInterpolation) {
         self.configure(isVertical: true, startFadeSize: startFadeSize, endFadeSize: endFadeSize, startProgressToHideFade: startFadeSize, endProgressToHideFade: endFadeSize, interpolation: interpolation)
     }
     
-    func configureDebug(isVertical: Bool = true, startFadeSize: CGFloat = 0.15, endFadeSize: CGFloat = 0.15, startProgressToHideFade: CGFloat = 0.15, endProgressToHideFade: CGFloat = 0.15, interpolation: CalculationHelpers.FadeInterpolation = .logarithmicFromEdges(base: 5), debugModeEnabled: Bool, debugProgressLogs: Bool, debugId: String) {
+    public func configureDebug(isVertical: Bool = true, startFadeSize: CGFloat = 0.15, endFadeSize: CGFloat = 0.15, startProgressToHideFade: CGFloat = 0.15, endProgressToHideFade: CGFloat = 0.15, interpolation: CalculationHelpers.FadeInterpolation = .logarithmicFromEdges(), debugModeEnabled: Bool, debugProgressLogs: Bool, debugId: String) {
         self.isVertical = isVertical
         self.startFadeSize = startFadeSize
         self.endFadeSize = endFadeSize
@@ -93,7 +93,7 @@ open class FadedUICollectionView: UICollectionView {
         commonInit()
     }
     
-    func configure(isVertical: Bool = true, startFadeSize: CGFloat = 0.15, endFadeSize: CGFloat = 0.15, startProgressToHideFade: CGFloat = 0.15, endProgressToHideFade: CGFloat = 0.15, interpolation: CalculationHelpers.FadeInterpolation = .logarithmicFromEdges(base: 5)) {
+    public func configure(isVertical: Bool = true, startFadeSize: CGFloat = 0.15, endFadeSize: CGFloat = 0.15, startProgressToHideFade: CGFloat = 0.15, endProgressToHideFade: CGFloat = 0.15, interpolation: CalculationHelpers.FadeInterpolation = .logarithmicFromEdges()) {
         self.isVertical = isVertical
         self.startFadeSize = startFadeSize
         self.endFadeSize = endFadeSize
