@@ -33,9 +33,9 @@ open class FadedUITextView: UITextView {
     @IBInspectable private var exponentialFromEdges: Bool = false
     
     // make insets 0
-    @IBInspectable private var removeInsets: Bool = false
+    @IBInspectable private var removeInsets: Bool = true
     // forbid selection/editing
-    @IBInspectable private var staticText: Bool = false
+    @IBInspectable private var staticText: Bool = true
     
     private var interpolation: CalculationHelpers.FadeInterpolation!
     
