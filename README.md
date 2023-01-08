@@ -41,11 +41,19 @@ pod 'BEFadedScrolls'
 ```
 
 ## How to apply
+
 In IB simply set necessary class in the <b>Identity Inspector</b><br />
 Configuration(setup) method is called automatically when FadedScroll element is created in IB<br />
+
+<img src="PresentationFiles/BEFadedScrolls_IBClassSelection.png"  alt="1" width = 555 height = 369 >
+<img src="PresentationFiles/BEFadedScrolls_IBSetUpExample.png"  alt="1" width = 364px height = 507 >
+
 <br />
 In code use the one of 4 classes available or subclass them and create your view<br />
 Then call one override of the 'configure' method and set the necessary values.<br />
+
+<img src="PresentationFiles/BE_FadedScrolls_textViewCodeSetup.png"  alt="1" width = 572 height = 251 >
+
 <br />
 You are responsible for setting position and size of Faded elements<br />
 
@@ -103,7 +111,7 @@ The value is useful only for LogarithmicFromEdges or ExponentialFromEdges modes<
 The value should be in the range of 2...10<br />
 The smaller the value the faster the content will fade, although any value except 10.0 will make 'hideFadePercents' effectively smaller
 
-![](PresentationFiles/BEFadedScrollsHowAlphaChanges.png)
+<img src="PresentationFiles/BEFadedScrollsHowAlphaChanges.png"  alt="1" width = 865 height = 549 >
 
 ## License
 
