@@ -9,7 +9,7 @@
 
 ## Library main information
 
-BEFadedScrolls is a light library that enables scrolls with faded edges. Faded edges are achieved via CAGradientLayer which is added onto UIScrollView subclass and applied as a mask. That mask's edge colors are being changed with overriden observable 'contentOffset' property.
+BEFadedScrolls is a light UIKit library that enables scrolls with faded edges. Faded edges are achieved via CAGradientLayer which is added onto UIScrollView subclass and applied as a mask. That mask's edge colors are being changed with overriden observable 'contentOffset' property.
 
 <table class="tg">
 <thead>
