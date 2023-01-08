@@ -41,16 +41,16 @@ pod 'BEFadedScrolls'
 ```
 
 ## How to apply
-In IB simply set necessary class in the <b>Identity Inspector</b>
-Configuration(setup) method is called automatically when FadedScroll element is created in IB
-
-In code use the one of 4 classes available or subclass them and create your view
-Then call one override of the 'configure' method and set the necessary values.
-
-You are responsible for setting position and size of Faded elements
+In IB simply set necessary class in the <b>Identity Inspector</b><br />
+Configuration(setup) method is called automatically when FadedScroll element is created in IB<br />
+<br />
+In code use the one of 4 classes available or subclass them and create your view<br />
+Then call one override of the 'configure' method and set the necessary values.<br />
+<br />
+You are responsible for setting position and size of Faded elements<br />
 
 ## Configurable values
-Some of configurable values are
+Some of configurable values are:
 
 ### startFadeSize/endFadeSize
 Is the size of fade (start/end) depending on scroll direction<br />
