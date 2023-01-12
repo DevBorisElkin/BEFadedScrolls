@@ -24,7 +24,7 @@ BEFadedScrolls is a light UIKit library that enables scrolls with faded edges. F
     <td class="tg-0lax"><h3>> Features</h3><ul><li><left>Quickly make scrollable content faded on edges</left></li><li>Works for UIScrollView, UITextView, UITableView, UICollectionView</li><li>Supports vertical ⇅ and horizontal scrolls ⇄</li><li>Configurable fades on both sides (top/bottom or left/right), enable/disable separately</li><li>Configurable interpolation (curve) (linear/logarithmic)</li><li>Supports IB and code setup</li></ol></td>
   </tr>
   <tr>
-    <td class="tg-0lax"><h3>> Preview description</h3><ol><li>Example of FadedUITextView - a UITextView subclass with 2 faded edges</li><li>The FadedUITextView just like the first one but with <b><i>debug mode enabled</i></b> - shows how 'mask layer' alpha changes on scrolling</li><li>Example of horizontal fades with FadedUICollectionView</li></ul></td>
+    <td class="tg-0lax"><h3>> Preview description</h3><ol><li>Example of FadedTextView - a UITextView subclass with 2 faded edges</li><li>The FadedTextView just like the first one but with <b><i>debug mode enabled</i></b> - shows how 'mask layer' alpha changes on scrolling</li><li>Example of horizontal fades with FadedCollectionView</li></ul></td>
   </tr>
 </tbody>
 </table>
@@ -42,8 +42,11 @@ pod 'BEFadedScrolls'
 
 ## How to apply
 
+Classes available for use:
+<ul><li>FadedScrollView</li><li>FadedTextView</li><li>FadedCollectionView</li><li>FadedTableView</li></ul>
+
 In IB simply set necessary class in the <b>Identity Inspector</b><br />
-Configuration(setup) method is called automatically when FadedScroll element is created in IB<br />
+Configuration(setup) method is called automatically when 'Faded' element is created in IB<br />
 
 <img src="PresentationFiles/BEFadedScrolls_IBClassSelection.png"  alt="1" width = 555 height = 369 >
 <img src="PresentationFiles/BEFadedScrolls_IBSetUpExample.png"  alt="1" width = 364px height = 507 >
