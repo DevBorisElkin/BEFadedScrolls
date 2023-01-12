@@ -1,5 +1,5 @@
 //
-//  FadedUITextView.swift
+//  FadedTableView.swift
 //  BEFadedScrolls
 //
 //  Created by Boris Elkin on 25.12.2022.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-open class FadedUITextView: UITextView {
+open class FadedTableView: UITableView {
     @IBInspectable private var isVertical: Bool = true
     
     @IBInspectable private var startFadeSizePercents: Int = 10 {
@@ -31,11 +31,6 @@ open class FadedUITextView: UITextView {
     @IBInspectable private var logarithmicFromEdges: Bool = false
     // further away from top/bottom borders - disappearing of content speeds up
     @IBInspectable private var exponentialFromEdges: Bool = false
-    
-    // make insets 0
-    @IBInspectable private var removeInsets: Bool = true
-    // forbid selection/editing
-    @IBInspectable private var staticText: Bool = true
     
     private var interpolation: CalculationHelpers.FadeInterpolation!
     
@@ -81,34 +76,30 @@ open class FadedUITextView: UITextView {
         }
     }
     
-    public func configure(startFadeSize: CGFloat, endFadeSize: CGFloat, interpolation: CalculationHelpers.FadeInterpolation, removeInsets: Bool = true, staticText: Bool = true) {
-        self.configure(isVertical: true, startFadeSize: startFadeSize, endFadeSize: endFadeSize, startProgressToHideFade: startFadeSize, endProgressToHideFade: endFadeSize, interpolation: interpolation, removeInsets: removeInsets, staticText: staticText)
+    public func configure(startFadeSize: CGFloat, endFadeSize: CGFloat, interpolation: CalculationHelpers.FadeInterpolation) {
+        self.configure(isVertical: true, startFadeSize: startFadeSize, endFadeSize: endFadeSize, startProgressToHideFade: startFadeSize, endProgressToHideFade: endFadeSize, interpolation: interpolation)
     }
     
-    public func configureDebug(isVertical: Bool = true, startFadeSize: CGFloat = 0.15, endFadeSize: CGFloat = 0.15, startProgressToHideFade: CGFloat = 0.15, endProgressToHideFade: CGFloat = 0.15, interpolation: CalculationHelpers.FadeInterpolation = .logarithmicFromEdges(), removeInsets: Bool = true, staticText: Bool = true, debugModeEnabled: Bool, debugProgressLogs: Bool, debugId: String) {
+    public func configureDebug(isVertical: Bool = true, startFadeSize: CGFloat = 0.15, endFadeSize: CGFloat = 0.15, startProgressToHideFade: CGFloat = 0.15, endProgressToHideFade: CGFloat = 0.15, interpolation: CalculationHelpers.FadeInterpolation = .logarithmicFromEdges(), debugModeEnabled: Bool, debugProgressLogs: Bool, debugId: String) {
         self.isVertical = isVertical
         self.startFadeSize = startFadeSize
         self.endFadeSize = endFadeSize
         self.startProgressToHideFade = startProgressToHideFade
         self.endProgressToHideFade = endProgressToHideFade
         self.interpolation = interpolation
-        self.removeInsets = removeInsets
-        self.staticText = staticText
         self.debugModeEnabled = debugModeEnabled
         self.debugProgressLogs = debugProgressLogs
         self.debugId = debugId
         commonInit()
     }
     
-    public func configure(isVertical: Bool = true, startFadeSize: CGFloat = 0.15, endFadeSize: CGFloat = 0.15, startProgressToHideFade: CGFloat = 0.15, endProgressToHideFade: CGFloat = 0.15, interpolation: CalculationHelpers.FadeInterpolation = .logarithmicFromEdges(), removeInsets: Bool = true, staticText: Bool = true) {
+    public func configure(isVertical: Bool = true, startFadeSize: CGFloat = 0.15, endFadeSize: CGFloat = 0.15, startProgressToHideFade: CGFloat = 0.15, endProgressToHideFade: CGFloat = 0.15, interpolation: CalculationHelpers.FadeInterpolation = .logarithmicFromEdges()) {
         self.isVertical = isVertical
         self.startFadeSize = startFadeSize
         self.endFadeSize = endFadeSize
         self.startProgressToHideFade = startProgressToHideFade
         self.endProgressToHideFade = endProgressToHideFade
         self.interpolation = interpolation
-        self.removeInsets = removeInsets
-        self.staticText = staticText
         commonInit()
     }
     
@@ -123,26 +114,8 @@ open class FadedUITextView: UITextView {
         showsHorizontalScrollIndicator = false
         showsVerticalScrollIndicator = false
         
-        if removeInsets { zeroOutInsets() }
-        if staticText { makeTextStatic() }
-        
         configureFadeInterpolation(injectedFromCode: interpolation)
         configureFadeLayer()
-    }
-    
-    public func removeInsetsAndMakeStatic() {
-        zeroOutInsets()
-        makeTextStatic()
-    }
-    
-    public func zeroOutInsets() {
-        textContainerInset = UIEdgeInsets.zero
-        textContainer.lineFragmentPadding = 0
-    }
-    
-    public func makeTextStatic() {
-        isEditable = false
-        isSelectable = false
     }
     
     private func configureFadeLayer() {

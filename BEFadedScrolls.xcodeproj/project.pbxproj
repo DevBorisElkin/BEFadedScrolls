@@ -12,9 +12,9 @@
 		52B001302966EC6400F0BE0C /* ProgressManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B0012F2966EC6400F0BE0C /* ProgressManager.swift */; };
 		52B001322966EC9500F0BE0C /* CalculationHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B001312966EC9500F0BE0C /* CalculationHelpers.swift */; };
 		52B001342966ED1A00F0BE0C /* FadedScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B001332966ED1A00F0BE0C /* FadedScrollView.swift */; };
-		52B001362966ED4900F0BE0C /* FadedUITextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B001352966ED4900F0BE0C /* FadedUITextView.swift */; };
-		52B001382966ED6B00F0BE0C /* FadedUICollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B001372966ED6B00F0BE0C /* FadedUICollectionView.swift */; };
-		52B0013A2966ED8300F0BE0C /* FadedUITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B001392966ED8300F0BE0C /* FadedUITableView.swift */; };
+		52B001362966ED4900F0BE0C /* FadedTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B001352966ED4900F0BE0C /* FadedTextView.swift */; };
+		52B001382966ED6B00F0BE0C /* FadedCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B001372966ED6B00F0BE0C /* FadedCollectionView.swift */; };
+		52B0013A2966ED8300F0BE0C /* FadedTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B001392966ED8300F0BE0C /* FadedTableView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,9 +24,9 @@
 		52B0012F2966EC6400F0BE0C /* ProgressManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressManager.swift; sourceTree = "<group>"; };
 		52B001312966EC9500F0BE0C /* CalculationHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculationHelpers.swift; sourceTree = "<group>"; };
 		52B001332966ED1A00F0BE0C /* FadedScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FadedScrollView.swift; sourceTree = "<group>"; };
-		52B001352966ED4900F0BE0C /* FadedUITextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FadedUITextView.swift; sourceTree = "<group>"; };
-		52B001372966ED6B00F0BE0C /* FadedUICollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FadedUICollectionView.swift; sourceTree = "<group>"; };
-		52B001392966ED8300F0BE0C /* FadedUITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FadedUITableView.swift; sourceTree = "<group>"; };
+		52B001352966ED4900F0BE0C /* FadedTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FadedTextView.swift; sourceTree = "<group>"; };
+		52B001372966ED6B00F0BE0C /* FadedCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FadedCollectionView.swift; sourceTree = "<group>"; };
+		52B001392966ED8300F0BE0C /* FadedTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FadedTableView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +40,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		520140F129709FA800DF5530 /* CalculationHelpers */ = {
+			isa = PBXGroup;
+			children = (
+				52B001312966EC9500F0BE0C /* CalculationHelpers.swift */,
+				52B0012F2966EC6400F0BE0C /* ProgressManager.swift */,
+			);
+			path = CalculationHelpers;
+			sourceTree = "<group>";
+		};
 		52B001192966EC0A00F0BE0C = {
 			isa = PBXGroup;
 			children = (
@@ -59,14 +68,13 @@
 		52B001252966EC0A00F0BE0C /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				52B001332966ED1A00F0BE0C /* FadedScrollView.swift */,
+				52B001352966ED4900F0BE0C /* FadedTextView.swift */,
+				52B001372966ED6B00F0BE0C /* FadedCollectionView.swift */,
+				52B001392966ED8300F0BE0C /* FadedTableView.swift */,
+				520140F129709FA800DF5530 /* CalculationHelpers */,
 				52B001262966EC0A00F0BE0C /* BEFadedScrolls.h */,
 				52B001272966EC0A00F0BE0C /* BEFadedScrolls.docc */,
-				52B0012F2966EC6400F0BE0C /* ProgressManager.swift */,
-				52B001312966EC9500F0BE0C /* CalculationHelpers.swift */,
-				52B001332966ED1A00F0BE0C /* FadedScrollView.swift */,
-				52B001352966ED4900F0BE0C /* FadedUITextView.swift */,
-				52B001372966ED6B00F0BE0C /* FadedUICollectionView.swift */,
-				52B001392966ED8300F0BE0C /* FadedUITableView.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -153,10 +161,10 @@
 				52B001322966EC9500F0BE0C /* CalculationHelpers.swift in Sources */,
 				52B001302966EC6400F0BE0C /* ProgressManager.swift in Sources */,
 				52B001342966ED1A00F0BE0C /* FadedScrollView.swift in Sources */,
-				52B001382966ED6B00F0BE0C /* FadedUICollectionView.swift in Sources */,
-				52B0013A2966ED8300F0BE0C /* FadedUITableView.swift in Sources */,
+				52B001382966ED6B00F0BE0C /* FadedCollectionView.swift in Sources */,
+				52B0013A2966ED8300F0BE0C /* FadedTableView.swift in Sources */,
 				52B001282966EC0A00F0BE0C /* BEFadedScrolls.docc in Sources */,
-				52B001362966ED4900F0BE0C /* FadedUITextView.swift in Sources */,
+				52B001362966ED4900F0BE0C /* FadedTextView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

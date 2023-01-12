@@ -7,6 +7,7 @@
 
 import UIKit
 
+/// Supplementary class to perform progress calculations
 open class ProgressManager {
     internal weak var parentScrollView: UIScrollView!
     internal var startFadeSizeMult: CGFloat = 0

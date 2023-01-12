@@ -7,6 +7,7 @@
 
 import Foundation
 
+/// Supplementary class to perform interpolation calculations
 public class CalculationHelpers {
     public static func remap(value: Double, from1: Double, to1: Double, from2: Double, to2: Double) -> Double {
         return (value - from1) / (to1 - from1) * (to2 - from2) + from2

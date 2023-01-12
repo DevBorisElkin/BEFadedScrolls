@@ -1,5 +1,5 @@
 //
-//  FadedUITableView.swift
+//  FadedCollectionView.swift
 //  BEFadedScrolls
 //
 //  Created by Boris Elkin on 25.12.2022.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-open class FadedUITableView: UITableView {
+open class FadedCollectionView: UICollectionView {
     @IBInspectable private var isVertical: Bool = true
     
     @IBInspectable private var startFadeSizePercents: Int = 10 {
